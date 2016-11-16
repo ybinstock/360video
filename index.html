@@ -1,0 +1,50 @@
+<!--<html>-->
+<!--<head>-->
+<!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<a-scene>-->
+<!--<a-video  webkit-playsinline  src="video.mp4"></a-video>-->
+
+<!--</a-scene>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>360 Video</title>
+  <meta name="description" content="360 Video — A-Frame">
+  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+</head>
+<body>
+<!--<a-scene>-->
+<!--<a-assets>-->
+<!--<video id="video" src="https://ucarecdn.com/bcece0a8-86ce-460e-856b-40dac4875f15/"-->
+<!--autoplay loop crossorigin></video>-->
+<!--</a-assets>-->
+
+<!--<a-videosphere src="#video" rotation="0 180 0"></a-videosphere>-->
+<!--</a-scene>-->
+
+
+<a-scene>
+  <a-assets>
+    <video id="video" src="video.mp4" loop="" webkit-playsinline="" autoplay="" controls=""></video>
+  </a-assets>
+  <a-entity geometry="primitive: sphere;
+                      radius: 5000;
+                      segmentsWidth: 64;
+                      segmentsHeight: 64;" material="shader: flat; src: #video;" scale="-1 1 1" rotation="0 180 0"
+            videospheremobile="">
+  </a-entity>
+  <a-entity position="0 1.8 4" data-aframe-default-camera="">
+    <a-entity camera="" wasd-controls="" look-controls="" rotation="0 0 0" position="0 0 0"></a-entity>
+  </a-entity>
+  <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+  <a-entity light="color:#fff;intensity:0.2" position="-1 2 1" data-aframe-default-light=""></a-entity>
+</a-scene>
+</body>
+</html>
